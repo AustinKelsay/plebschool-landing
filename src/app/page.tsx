@@ -22,6 +22,7 @@ import {
   Layers,
   Terminal,
 } from "lucide-react";
+import { LandingThemeControls } from "@/components/landing-theme-controls";
 
 export default function Home() {
   return (
@@ -56,7 +57,7 @@ function Header() {
             </span>
           </div>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             <a
               href="#features"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -83,21 +84,22 @@ function Header() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <LandingThemeControls />
             <a
               href="https://github.com/AustinKelsay/pleb.school"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground sm:flex"
+              aria-label="GitHub"
+              className="hidden h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:bg-accent/40 hover:text-foreground md:inline-flex"
             >
               <Github className="h-4 w-4" />
-              GitHub
             </a>
             <a
               href="https://demo.pleb.school"
               className="inline-flex h-9 items-center gap-2 rounded-lg bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90"
             >
-              View Demo
+              Demo
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -113,7 +115,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36">
       {/* Subtle grid */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,oklch(0.5_0_0/3%)_1px,transparent_1px),linear-gradient(to_bottom,oklch(0.5_0_0/3%)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="hero-grid pointer-events-none absolute inset-0" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
@@ -880,8 +882,8 @@ function Footer() {
 /* ──────────────── JSON Syntax Highlighting Helpers ──────────────── */
 
 const SYN = {
-  key: "text-[oklch(0.7_0.15_220)]",       // blue
-  string: "text-[oklch(0.72_0.17_145)]",    // green
+  key: "text-chart-1",
+  string: "text-chart-2",
   bracket: "text-muted-foreground",
   punctuation: "text-muted-foreground",
 };

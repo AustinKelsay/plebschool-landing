@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { plebThemeUiConfig } from "@/lib/pleb-theme-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,8 +26,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const htmlClass = plebThemeUiConfig.defaults.darkMode === true ? "dark" : undefined;
+
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={htmlClass}>
       <body className="antialiased">{children}</body>
     </html>
   );
