@@ -6,8 +6,8 @@ import {
   getCompleteTheme,
   type FontConfig,
   type ThemeName,
-} from "../../llm/projects/pleb.school/src/lib/theme-config";
-import rawThemeConfig from "../../llm/projects/pleb.school/config/theme.json";
+} from "@/lib/vendor/pleb/theme-config";
+import rawThemeConfig from "@/config/pleb-theme-ui.json";
 
 export { completeThemes, defaultThemeName, getCompleteTheme };
 export { availableFonts };
